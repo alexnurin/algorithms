@@ -17,7 +17,7 @@ def iteration(prefix, postfix, target):
 
 
 def calculate(a):
-    # посчитать значение выражения, состоящего из чисел, разделенных знаками + и -
+    # Посчитать значение выражения, состоящего из целых чисел, разделенных символами + и -.
     numbers = [int(i) for i in re.split('[+-]', a) if i]
     symbols = [i for i in re.split('[^+-]', a) if i]
     result = numbers[0]
@@ -27,5 +27,6 @@ def calculate(a):
     return result
 
 
-s = '9876543210'
-find_all_solutions(s, 200)
+if __name__ == "__main__":
+    s = '9876543210'
+    find_all_solutions(s, 200)
